@@ -24,16 +24,28 @@ body{
     place-items: center;
 }
 .container::before{
-    top:-250px;
-    left:-300px;
     background:linear-gradient(#f0f,#f00);
-    clip-path: circle(20% at 70% 65%);
+    clip-path: circle(15% at 70% 65%);
+    animation-name: example1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;  
+}
+@keyframes example{
+    0%   {left:-100px; top:-50px;}
+    50%  {left:-600px; top:100px}
+    100% {left:-100px; top:-50px}
+}
+@keyframes example1{
+    0%   {left:-500px; top:-300px;}
+    50%  {left:-100px; top:-400px}
+    100% {left:-500px; top:-300px}
 }
 .container::after{
-    top:100px;
-    left:50px;
     background:linear-gradient(#e91e63,#2196f3);
-    clip-path: circle(20% at 70% 65%);
+    clip-path: circle(15% at 70% 65%);
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
 }
 .container .card-wrapper{
     position: relative;
